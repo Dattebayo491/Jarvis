@@ -9,7 +9,7 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-@eel.expose
+
 def speachrecog():
     recog = speech_recognition.Recognizer()
     with speech_recognition.Microphone() as mic:
@@ -31,4 +31,9 @@ def speachrecog():
        print(f'Возникла ошибка: {error}')
        return ""
    
-    return spk
+    return spk.lower()
+
+@eel.expose
+def allCommands():
+    spk = speachrecog()
+    print(spk)
