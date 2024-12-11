@@ -37,3 +37,8 @@ def speachrecog():
 def allCommands():
     spk = speachrecog()
     print(spk)
+
+    if "открой" in spk:
+        print("Запускаю")
+    else:
+        print("Не запускаю")
